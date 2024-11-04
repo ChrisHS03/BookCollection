@@ -12,11 +12,11 @@ public class Controller {
     public void addBook(String title, String author, int pages) throws IOException {
         Book book = new Book(title, author, pages);
         bookShelf.addBook(book);
-        saveFile(bookShelf.getBooks());
+        saveFile();
     }
     public void removeBook(String title) throws IOException {
         bookShelf.removeBookFromBookshelf(title);
-        saveFile(bookShelf.getBooks());
+        saveFile();
     }
     public void saveFile() throws IOException {
         fileHandler.saveFile(bookShelf.getBooks());
@@ -29,9 +29,7 @@ public class Controller {
             bookShelf.addBook(book);
         }
     }
-    public void saveFile(ArrayList<Book> books) throws IOException {
-        fileHandler.saveFile(books);
-    }
+
     public ArrayList<Book> findBook(String title){
         return bookShelf.findBook(title);
     }
