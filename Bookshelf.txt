@@ -1,2 +1,2 @@
-ABE,BANAN,3
-ko,john,4
+ko,ko,4
+abe,abeMand,4

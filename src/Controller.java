@@ -18,23 +18,11 @@ public class Controller {
         bookShelf.removeBookFromBookshelf(title);
         saveFile(bookShelf.getBooks());
     }
-    public void editBook(String search, String title, String author, int pages) throws IOException {
-        for (Book book : bookShelf.getBooks()) {
-            if (book.getTitle().equals(search)) {
-                book.setTitle(title);
-                book.setAuthor(author);
-                book.setPages(pages);
-            }
-        }
-        saveFile(bookShelf.getBooks());
+    public void saveFile() throws IOException {
+        fileHandler.saveFile(bookShelf.getBooks());
     }
-    public void printBooks() {
-        for (Book book : bookShelf.getBooks()) {
-            System.out.println(book);
-        }
-        if (bookShelf.getBooks().isEmpty()) {
-            System.out.println("The bookshelf is empty");
-        }
+    public String printBooks() {
+        return bookShelf.printBooks();
     }
     public void readFile() throws FileNotFoundException {
         for (Book book : fileHandler.readFile()){
@@ -43,5 +31,8 @@ public class Controller {
     }
     public void saveFile(ArrayList<Book> books) throws IOException {
         fileHandler.saveFile(books);
+    }
+    public ArrayList<Book> findBook(String title){
+        return bookShelf.findBook(title);
     }
 }
