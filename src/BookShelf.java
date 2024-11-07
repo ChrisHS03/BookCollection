@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class BookShelf {
     private ArrayList<Book> books = new ArrayList<Book>();
@@ -31,9 +32,6 @@ public class BookShelf {
         return foundBooks;
     }
 
-    public void editBook(String search, String title, String author, int pages){
-
-    }
     public String printBooks(){
         String printString = "";
         for (Book book : books) {

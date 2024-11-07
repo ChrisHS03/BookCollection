@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UI {
@@ -21,12 +20,15 @@ public class UI {
 
         while (running) {
 
+            System.out.println("----------------------------");
             System.out.println("1: Add a book");
             System.out.println("2: Remove a book");
             System.out.println("3: Edit a book");
             System.out.println("4: See your book database");
             System.out.println("5: Find book by title");
-            System.out.println("6: Exit");
+            System.out.println("6: Sort bookshelf");
+            System.out.println("7: Exit");
+            System.out.println("----------------------------");
 
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
@@ -81,6 +83,9 @@ public class UI {
                         }
                     }
                     case 6 -> {
+
+                    }
+                    case 7 -> {
                         running = false;
                     }
                 }
