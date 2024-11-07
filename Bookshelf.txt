@@ -2,4 +2,5 @@ ko,ko,4
 Abe,monkey,5
 ,,4
 oiuytrdcvb,325,5
-kokokokaefnjwbfjd,whefgyseajcbadv,2
+5,5,5
+ko,ko,5
